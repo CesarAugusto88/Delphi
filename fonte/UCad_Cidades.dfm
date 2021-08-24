@@ -1,8 +1,8 @@
 object frmCadCidades: TfrmCadCidades
   Left = 272
   Top = 144
-  Width = 870
-  Height = 500
+  Width = 877
+  Height = 546
   Caption = 'Formul'#225'rio para cadastro e manuten'#231#227'o de Clientes'
   Color = clBtnFace
   Font.Charset = GREEK_CHARSET
@@ -27,7 +27,7 @@ object frmCadCidades: TfrmCadCidades
     Font.Style = [fsBold]
   end
   object sLabel2: TsLabel
-    Left = 40
+    Left = 48
     Top = 132
     Width = 51
     Height = 23
@@ -40,7 +40,7 @@ object frmCadCidades: TfrmCadCidades
     Font.Style = [fsBold]
   end
   object sLabel3: TsLabel
-    Left = 40
+    Left = 72
     Top = 200
     Width = 24
     Height = 23
@@ -52,6 +52,7 @@ object frmCadCidades: TfrmCadCidades
     Font.Name = 'Arial Black'
     Font.Style = [fsBold]
   end
+<<<<<<< HEAD
   object DBGrid1: TDBGrid
     Left = 48
     Top = 304
@@ -114,17 +115,26 @@ object frmCadCidades: TfrmCadCidades
         Visible = True
       end>
   end
+=======
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
   object DBNavigator1: TDBNavigator
     Left = 24
     Top = 32
     Width = 400
     Height = 41
     DataSource = DataModule1.dsSqlConCidade
+<<<<<<< HEAD
     TabOrder = 1
     OnClick = DBNavigator1Click
   end
   object ComboBox1: TComboBox
     Left = 120
+=======
+    TabOrder = 0
+  end
+  object ComboBox1: TComboBox
+    Left = 116
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
     Top = 200
     Width = 145
     Height = 22
@@ -137,7 +147,66 @@ object frmCadCidades: TfrmCadCidades
     ParentFont = False
     ParentShowHint = False
     ShowHint = False
+    TabOrder = 1
+  end
+  object edCodCid: TsEdit
+    Left = 117
+    Top = 88
+    Width = 121
+    Height = 22
+    Color = clWhite
+    Font.Charset = GREEK_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
+    SkinData.SkinSection = 'EDIT'
+    BoundLabel.Indent = 0
+    BoundLabel.Font.Charset = DEFAULT_CHARSET
+    BoundLabel.Font.Color = clWindowText
+    BoundLabel.Font.Height = -11
+    BoundLabel.Font.Name = 'MS Sans Serif'
+    BoundLabel.Font.Style = []
+    BoundLabel.Layout = sclLeft
+    BoundLabel.MaxWidth = 0
+    BoundLabel.UseSkinColor = True
+  end
+  object edNomCid: TsEdit
+    Left = 117
+    Top = 134
+    Width = 121
+    Height = 22
+    Color = clWhite
+    Font.Charset = GREEK_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+    SkinData.SkinSection = 'EDIT'
+    BoundLabel.Indent = 0
+    BoundLabel.Font.Charset = DEFAULT_CHARSET
+    BoundLabel.Font.Color = clWindowText
+    BoundLabel.Font.Height = -11
+    BoundLabel.Font.Name = 'MS Sans Serif'
+    BoundLabel.Font.Style = []
+    BoundLabel.Layout = sclLeft
+    BoundLabel.MaxWidth = 0
+    BoundLabel.UseSkinColor = True
+  end
+  object sDBCtrlGrid1: TsDBCtrlGrid
+    Left = 64
+    Top = 264
+    Width = 545
+    Height = 216
+    DataSource = DataModule1.dsSqlConCidade
+    PanelWidth = 528
+    TabOrder = 4
+    SkinData.SkinSection = 'CHECKBOX'
+    PanelSkin = 'GROUPBOX'
   end
   object edCod: TsEdit
     Left = 120
