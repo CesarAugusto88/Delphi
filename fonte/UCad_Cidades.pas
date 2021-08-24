@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DBCtrls, sDBComboBox, dbcgrids, acDBCtrlGrid, sLabel,
-  Grids, DBGrids, ExtCtrls;
+  Grids, DBGrids, ExtCtrls, sEdit, DB, IBCustomDataSet, IBTable;
 
 type
   TfrmCadCidades = class(TForm)
@@ -15,6 +15,12 @@ type
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
     ComboBox1: TComboBox;
+    edCod: TsEdit;
+    edNom: TsEdit;
+    tblAuxCidade: TIBTable;
+    tblAuxCidadeCID_CODIGO: TIntegerField;
+    procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+    procedure DBGrid1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -29,5 +35,23 @@ implementation
 uses dmDados;
 
 {$R *.dfm}
+
+procedure TfrmCadCidades.DBNavigator1Click(Sender: TObject;
+  Button: TNavigateBtn);
+  var ultcod : Integer;
+begin
+  if DataModule1.dsSqlConCidade.State in [dsInsert] then
+  begin
+        tblAuxCidade.last;
+        ultcod := tblAuxCidadeCID_CODIGO.Value+1;
+        DataModule1.sqlConCidadeCID_CODIGO.Value:=ultcod;
+  end;
+end;
+
+procedure TfrmCadCidades.DBGrid1CellClick(Column: TColumn);
+begin
+  edCod.Text := DataModule1.sqlConCidadeCID_CODIGO.AsString;
+  edNom.Text := DataModule1.sqlConCidadeCID_NOME.AsString;
+end;
 
 end.
