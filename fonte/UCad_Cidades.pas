@@ -6,7 +6,11 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, DBCtrls, sDBComboBox, dbcgrids, acDBCtrlGrid, sLabel,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Grids, DBGrids, ExtCtrls, sEdit, DB, IBCustomDataSet, IBTable;
+=======
+  Grids, DBGrids, ExtCtrls, sEdit;
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
 =======
   Grids, DBGrids, ExtCtrls, sEdit;
 >>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
@@ -19,11 +23,17 @@ type
     DBNavigator1: TDBNavigator;
     ComboBox1: TComboBox;
 <<<<<<< HEAD
+<<<<<<< HEAD
     edCod: TsEdit;
     edNom: TsEdit;
     tblAuxCidade: TIBTable;
     tblAuxCidadeCID_CODIGO: TIntegerField;
     procedure DBNavigator1Click(Sender: TObject; Button: TNavigateBtn);
+=======
+    edCodCid: TsEdit;
+    edNomCid: TsEdit;
+    sDBCtrlGrid1: TsDBCtrlGrid;
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
 =======
     edCodCid: TsEdit;
     edNomCid: TsEdit;
@@ -46,6 +56,7 @@ uses dmDados;
 {$R *.dfm}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 procedure TfrmCadCidades.DBNavigator1Click(Sender: TObject;
   Button: TNavigateBtn);
   var ultcod : Integer;
@@ -63,10 +74,15 @@ begin
   edCod.Text := DataModule1.sqlConCidadeCID_CODIGO.AsString;
   edNom.Text := DataModule1.sqlConCidadeCID_NOME.AsString;
 =======
+=======
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
 procedure TfrmCadCidades.DBGrid1CellClick(Column: TColumn);
 begin
   edCodCid.Text := DataModule1.sqlConCidade.FieldByName('CID_CODIGO').AsString;
   edNomCid.Text := DataModule1.sqlConCidade.FieldByName('CID_NOME').AsString;
+<<<<<<< HEAD
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
+=======
 >>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
 end;
 

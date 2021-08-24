@@ -53,6 +53,7 @@ object frmCadCidades: TfrmCadCidades
     Font.Style = [fsBold]
   end
 <<<<<<< HEAD
+<<<<<<< HEAD
   object DBGrid1: TDBGrid
     Left = 48
     Top = 304
@@ -117,6 +118,8 @@ object frmCadCidades: TfrmCadCidades
   end
 =======
 >>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
+=======
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
   object DBNavigator1: TDBNavigator
     Left = 24
     Top = 32
@@ -124,11 +127,18 @@ object frmCadCidades: TfrmCadCidades
     Height = 41
     DataSource = DataModule1.dsSqlConCidade
 <<<<<<< HEAD
+<<<<<<< HEAD
     TabOrder = 1
     OnClick = DBNavigator1Click
   end
   object ComboBox1: TComboBox
     Left = 120
+=======
+    TabOrder = 0
+  end
+  object ComboBox1: TComboBox
+    Left = 116
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
 =======
     TabOrder = 0
   end
@@ -207,6 +217,7 @@ object frmCadCidades: TfrmCadCidades
     TabOrder = 4
     SkinData.SkinSection = 'CHECKBOX'
     PanelSkin = 'GROUPBOX'
+<<<<<<< HEAD
   end
   object edCod: TsEdit
     Left = 120
@@ -300,5 +311,7 @@ object frmCadCidades: TfrmCadCidades
     object tblAuxCidadeCID_CODIGO: TIntegerField
       FieldName = 'CID_CODIGO'
     end
+=======
+>>>>>>> ef986f9f41bcf168ea640d26d14474703c37eb16
   end
 end
